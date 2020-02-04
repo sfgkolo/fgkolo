@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>FG KOLO</title>
+<link rel='icon' href='favicon.ico' type='image/x-icon'/ >
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300&display=swap" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="/path/to/parallax.js"></script>
+   </head>
+   <body>
+      <div class="wrapper">
+         <header>
+           <div class="menu">
+            <nav>
+               <div class="menu-icon">
+                  <i class="fa fa-bars fa-2x"></i>
+               </div>
+               <div class="logo">
+                <a href="#">  <img src="fgLogo.png" alt="logo"></a>
+               </div>
+               <div class="menu">
+                  <ul>
+
+                     <li><a href="#about">About</a></li>
+                     <li><a href="#upcoming">Upcoming Events</a></li>
+                     <li><a href="#join">Join</a></li>
+
+                  </ul>
+               </div>
+            </nav>
+         </header>
+         <div class="content">
+
+
+<div id="about" >
+<h1 align="center"> ABOUT </h1>
+  Folklorna Grupa Kolo is a traditional Serbian dance group based in Ottawa.
+   We are passionate about keeping the art of Serbian folklore dancing
+   alive and thriving across borders and generations. We have performed
+   all over Ontario at various venues and festivals. If you woud like to see
+   beautiful traditional costumes and spirited cultural dancing, please
+   see our next performance or join in on the fun yourself!
+
+ </div>
+
+<div id="upcoming"  >
+
+
+<h3>Practice Schedule </h3>
+Monday / Ponedeljak<br>
+
+	•	19:30 do 20:30  Balske igre (BI)<br>
+	•	20:30 do 21:30  Narodne igre (NI)<br>
+	•	18:30 do 19:30  Gradske igre (GI)<br><br>
+
+Thursday / Cetvrtak<br>
+
+	•	19:30 do 20:30  Balske igre (BI)<br>
+	•	20:30 do 21:30  Narodne igre (NI)<br>
+	•	18:30 do 19:30  Gradske igre (GI)<br><br>
+Friday / Petak<br>
+	•	18:30 do 19:30  Najmladja  i Mladja Grupa od <br>
+	•	20:00 do 20:30  Mladja i Prva grupa:  <br>
+	•	20:30 do 21:30  Prva Grupa<br>
+
+
+
+
+</div>
+
+<div id="join">
+
+<h1 align="center"> JOIN </h1>
+            If you would like a fun and cultural experience,
+            along with some exercise and socializing, try out some folklore
+            dancing. You don't have to be from a Serbian
+            background to join FG Kolo, as everyone is welcome. We practice
+            at the
+            <a href="https://www.google.com/maps/dir/45.2829184,-75.7284864/sveti+stefan+ottawa/@45.3110831,-75.7556416,13z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x4cce08e519a4db03:0x9bf910c8389d21fa!2m2!1d-75.7004986!2d45.3464648" target="_blank">
+              Serbian Center in Ottawa</a> and would love to see you there! Please contact
+            head choreographer Aleksandar Rajak <a href="mailto:webmaster@example.com">(aco@gmail.com)</a> for more information.
+
+ </div>
+     </div>
+
+
+      <script type="text/javascript">
+        $(document).ready(function() {
+           $(".menu-icon").on("click", function() {
+                 $("nav ul").toggleClass("showing");
+           });
+     });
+
+     // Scrolling Effect
+
+     $(window).on("scroll", function() {
+           if($(window).scrollTop()) {
+                 $('nav').addClass('black');
+           }
+
+           else {
+                 $('nav').removeClass('black');
+           }
+     })
+      </script>
+
+</html>
