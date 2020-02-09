@@ -1,36 +1,4 @@
-<?php
-$errors = '';
-$myemail = 'sfgkolo@gmail.com';//<-----Put Your email address here.
-if(empty($_POST['name'])  ||
-   empty($_POST['email']) ||
-   empty($_POST['message']))
-{
-    $errors .= "\n Error: all fields are required";
-}
-$name = $_POST['name'];
-$email_address = $_POST['email'];
-$message = $_POST['message'];
-if (!preg_match(
-"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i",
-$email_address))
-{
-    $errors .= "\n Error: Invalid email address";
-}
 
-if( empty($errors))
-{
-$to = $myemail;
-$email_subject = "Contact form submission: $name";
-$email_body = "You have received a new message. ".
-" Here are the details:\n Name: $name \n ".
-"Email: $email_address\n Message \n $message";
-$headers = "From: $myemail\n";
-$headers .= "Reply-To: $email_address";
-mail($to,$email_subject,$email_body,$headers);
-//redirect to the 'thank you' page
-header('Location: contact-form-thank-you.html');
-}
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
    <head>
@@ -120,23 +88,14 @@ Friday / Petak<br>
             <a href="https://www.google.com/maps/dir/45.2829184,-75.7284864/sveti+stefan+ottawa/@45.3110831,-75.7556416,13z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x4cce08e519a4db03:0x9bf910c8389d21fa!2m2!1d-75.7004986!2d45.3464648" target="_blank">
               Serbian Center in Ottawa</a> and would love to see you there! Please contact the
              <a href="mailto:rajak.aleksandar@gmail.com ">head choreographer</a> for more information.
-<form method="post" name="contact_form"
-action="contact-form-handler.php">
-    Your Name:
-    <input type="text" name="name">
-    Email Address:
-    <input type="text" name="email">
-    Message:
-    <textarea name="message"></textarea>
-    <input type="submit" value="Submit">
+<form action="https://submit-form.com/asuRqsqhFLEvgUQ3zGw_0" target="_self">
+   <!-- All elements must have a name attribute -->
+   <input type="text" name="subject" placeholder="Subject">
+   <textarea name="message" placeholder="Message"></textarea>
+   <input type="text" name="email" placeholder="Email">
+   <!-- A button of type submit -->
+   <button type="submit">Submit</button>
 </form>
-	<script language="JavaScript">
-var frmvalidator  = new Validator("contactform");
-frmvalidator.addValidation("name","req","Please provide your name");
-frmvalidator.addValidation("email","req","Please provide your email");
-frmvalidator.addValidation("email","email",
-  "Please enter a valid email address");
-</script>
  </div>
      </div>
 
