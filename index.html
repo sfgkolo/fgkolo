@@ -1,4 +1,20 @@
+<?php
 
+if($_POST["submit"]) {
+    $recipient="nem270@gmail.com";
+    $subject="Form to email message";
+    $sender=$_POST["sender"];
+    $senderEmail=$_POST["senderEmail"];
+    $message=$_POST["message"];
+
+    $mailBody="Name: $sender\nEmail: $senderEmail\n\n$message";
+
+    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
+
+    $thankYou="<p>Thank you! Your message has been sent.</p>";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
    <head>
@@ -88,6 +104,21 @@ Friday / Petak<br>
             <a href="https://www.google.com/maps/dir/45.2829184,-75.7284864/sveti+stefan+ottawa/@45.3110831,-75.7556416,13z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x4cce08e519a4db03:0x9bf910c8389d21fa!2m2!1d-75.7004986!2d45.3464648" target="_blank">
               Serbian Center in Ottawa</a> and would love to see you there! Please contact the
              <a href="mailto:rajak.aleksandar@gmail.com ">head choreographer</a> for more information.
+	
+	    <?=$thankYou ?>
+
+    <form method="post" action="contact.php">
+        <label>Name:</label>
+        <input name="sender">
+
+        <label>Email address:</label>
+        <input name="senderEmail">
+
+        <label>Message:</label>
+        <textarea rows="5" cols="20" name="message"></textarea>
+
+        <input type="submit" name="submit">
+    </form>
 
  </div>
      </div>
